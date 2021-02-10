@@ -1,6 +1,7 @@
 FROM php:5-apache
 
 ENV VERSION=4.0.3
+LABEL maintainer="Ariel Antigua <me@arielantigua.com>"
 WORKDIR /src
 
 RUN	apt-get update \

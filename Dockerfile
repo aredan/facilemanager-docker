@@ -7,7 +7,7 @@ WORKDIR /src
 RUN	apt-get update \
 	&& apt-get -qqy install wget libldb-dev libldap2-dev \
 	&& wget http://www.facilemanager.com/download/facilemanager-complete-${VERSION}.tar.gz \
-	&& tar -xvf facilemanager-complete-${VERSION}.gz \
+	&& tar -xvf facilemanager-complete-${VERSION}.tar.gz \
 	&& mv facileManager/server/* /var/www/html/
 
 RUN ln -s /usr/lib/x86_64-linux-gnu/libldap.so /usr/lib/libldap.so \

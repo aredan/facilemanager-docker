@@ -10,9 +10,9 @@ RUN	apt-get update \
 	&& tar -xvf facilemanager-complete-${VERSION}.tar.gz \
 	&& mv facileManager/server/* /var/www/html/
 
-RUN ln -s /usr/lib/x86_64-linux-gnu/libldap.so /usr/lib/libldap.so \
-	&& docker-php-ext-install mysql mysqli ldap \
-	&& a2enmod rewrite dump_io
+RUN ln -s /usr/lib/x86_64-linux-gnu/libldap.so /usr/lib/libldap.so 
+RUN docker-php-ext-install mysqli ldap 
+RUN a2enmod rewrite dump_io
 
 COPY fmdns/config.inc.php /var/www/html/
 COPY php.ini /usr/local/etc/php/php.ini

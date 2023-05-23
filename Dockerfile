@@ -1,4 +1,4 @@
-FROM php:5-apache
+FROM php:8.0-apache
 
 ENV VERSION=4.5.0
 LABEL maintainer="Ariel Antigua <me@arielantigua.com>"

@@ -33,8 +33,9 @@ pipeline {
     stage('Remove Unused docker image') {
       steps
       {
-        sh "docker rmi $imagename:$BUILD_TIMESTAMP"
-        sh "docker rmi $imagename:latest"
+        // sh "docker rmi $imagename:$BUILD_TIMESTAMP"
+        // sh "docker rmi $imagename:latest"
+        sh "docker system prune -af --volumes"
  
       }
     }

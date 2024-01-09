@@ -9,7 +9,7 @@ pipeline {
     stage('Cloning Git') {
       steps {
         git([url: 'https://github.com/aredan/facilemanager-docker.git', branch: 'version-4.5.0'])
- 
+
       }
     }
     stage('Building Image') {
@@ -22,7 +22,7 @@ pipeline {
     stage('Deploy Image') {
       steps{
         script {
-          docker.withRegistry( '', registryCredential ) 
+          docker.withRegistry( 'https://registry.hub.docker.com', registryCredential ) 
         {
             dockerImage.push("$BUILD_NUMBER")
             dockerImage.push('latest')

@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Cloning Git') {
       steps {
-        git([url: 'https://github.com/aredan/facilemanager-docker.git, branch: 'main'])
+        git([url: 'https://github.com/aredan/facilemanager-docker.git', branch: 'version-4.5.0'])
  
       }
     }

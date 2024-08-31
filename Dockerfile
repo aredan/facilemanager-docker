@@ -1,6 +1,6 @@
 FROM php:8.0-apache
 
-ENV VERSION=4.5.0
+ENV VERSION=4.6.2
 LABEL maintainer="Ariel Antigua <me@arielantigua.com>"
 WORKDIR /src
 
